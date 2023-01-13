@@ -36,7 +36,7 @@ module.exports = function toReadable(number) {
     if (number < 20 || numStr.lenght === 2 && numStr[1] === '0') {
         return arr[number];
     } else if (numStr > 19 && numStr < 100) {
-        if ((numStr[1] === '0')){
+        if ((numStr[1] === '0')) {
             return `${arr[numStr[0] + '0']}`;
         }
         return `${arr[numStr[0] + '0']} ${arr[numStr[1]]}`;
@@ -45,21 +45,21 @@ module.exports = function toReadable(number) {
         if (numStr[2] === '0') {
             return `${arr[numStr[0]]} ${hundred}`
         }
-        if (numStr[1] === '8' && numStr[1]=== '9'){
-           return `${arr[numStr[0]]} ${hundred} ${arr[numStr[1]]} ${endTy}`
+        if (numStr[1] === '8' || numStr[1] === '9' && numStr[2] === '0') {
+            return `${arr[numStr[0]]} ${hundred} ${arr[numStr[1]]}`
         }
-        if(numStr[2]==='0'){
+        if (numStr[2] === '0') {
             return `${arr[numStr[0]]} ${hundred} ${arr[numStr[1] + '0']}`;
         }
-        if (numStr[1] === '0'){
+        if (numStr[1] === '0') {
             return `${arr[numStr[0]]} ${hundred} ${arr[numStr[2]]}`;
         }
-        
+
         return `${arr[numStr[0]]} ${hundred} ${arr[numStr[1] + '0']} ${arr[numStr[2]]}`;
     }
 
 
-//149
+    //149
 
 
 }
