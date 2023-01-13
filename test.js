@@ -3015,7 +3015,7 @@ it('Should return \'five hundred one\' when 501 given', () => {
   assert.equal(readable, 'five hundred one');
 });
 
-it.only('Should return \'five hundred two\' when 502 given', () => {
+it('Should return \'five hundred two\' when 502 given', () => {
   const readable = toReadable(502);
 
   assert.equal(readable, 'five hundred two');
