@@ -48,12 +48,25 @@ module.exports = function toReadable(number) {
         if (numStr[1] === '8' && numStr[2] === '0') {
             return `${arr[numStr[0]]} ${hundred} ${arr[numStr[1] + '0']}`
         }
-        
+        if (numStr[1] === '9' && numStr[2] === '0') {
+            return `${arr[numStr[0]]} ${hundred} ${arr[numStr[1] + '0']}`
+        }
+
+        if (numStr[1] === '1' && numStr[2] === '1') {
+            return `${arr[numStr[0]]} ${hundred} ${arr[numStr[1]+'1']}`
+        }
+        if(numStr[1] === '0' && numStr[2] === '1') {
+            return `${arr[numStr[0]]} ${hundred} ${arr[numStr[2]]}`
+        }
+        if (numStr[1] === '0' && numStr[2] === '2' && numStr[2] === '3' && numStr[2] === '4' && numStr[2] === '5' && numStr[2] === '6' && numStr[2] === '7' && numStr[2] === '8' && numStr[2] === '9') {
+            return `${arr[numStr[0]]} ${hundred} ${arr[numStr[2]]}`
+        }
+
         if (numStr[2] === '0') {
             return `${arr[numStr[0]]} ${hundred} ${arr[numStr[1] + '0']}`;
         }
         if (numStr[1] === '0') {
-            return `${arr[numStr[0]]} ${hundred} ${arr[numStr[2]]}`;
+            return `${arr[numStr[0]]} ${hundred} ${arr[numStr[1]]}`;
         }
 
         return `${arr[numStr[0]]} ${hundred} ${arr[numStr[1] + '0']} ${arr[numStr[2]]}`;
