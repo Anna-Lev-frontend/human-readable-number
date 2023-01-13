@@ -79,6 +79,33 @@ module.exports = function toReadable(number) {
         if (numStr[1] === '0' && numStr[2] === '2') {
             return `${arr[numStr[0]]} ${hundred} ${arr[numStr[2]]}`
         }
+        if (numStr[1] === '0' && numStr[2] === '3') {
+            return `${arr[numStr[0]]} ${hundred} ${arr[numStr[2]]}`
+        }
+        if (numStr[1] === '0' && numStr[2] === '4') {
+            return `${arr[numStr[0]]} ${hundred} ${arr[numStr[2]]}`
+        }
+        if (numStr[1] === '0' && numStr[2] === '5') {
+            return `${arr[numStr[0]]} ${hundred} ${arr[numStr[2]]}`
+        }
+        if (numStr[1] === '0' && numStr[2] === '8') {
+            return `${arr[numStr[0]]} ${hundred} ${arr[numStr[2]]}`
+        }
+        if (numStr[1] === '1' && numStr[2] === '2') {
+            return `${arr[numStr[0]]} ${hundred} ${arr[numStr[1]+'2']}`
+        }
+        if (numStr[1] === '1' && numStr[2] === '4') {
+            return `${arr[numStr[0]]} ${hundred} ${arr[numStr[1] + '4']}`
+        }
+        if (numStr[1] === '1' && numStr[2] === '5') {
+            return `${arr[numStr[0]]} ${hundred} ${arr[numStr[1] + '5']}`
+        }
+        if (numStr[1] === '1' && numStr[2] === '7') {
+            return `${arr[numStr[0]]} ${hundred} ${arr[numStr[1] + '7']}`
+        }
+        if (numStr[1] === '1' && numStr[2] === '8') {
+            return `${arr[numStr[0]]} ${hundred} ${arr[numStr[1] + '8']}`
+        }
         if (numStr[2] === '0') {
             return `${arr[numStr[0]]} ${hundred} ${arr[numStr[1] + '0']}`;
         }
